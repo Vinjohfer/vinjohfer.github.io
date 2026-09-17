@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    </head>
+
+    <body class="Background">
+        
+        <!--Navbar-->
+        <nav class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+
+        <!--Background video-->
+        <header id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="images/video/Typing.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <div class="Video_Text">
+                <h1 class="white-text">My Portfolio</h1>
+                <div class="center">
+                    <q>Hi, I'm Vincent a Software & Web Developer Enthusiast</q><br><br>
+                    <q>Passionate about building clean, responsive web applications, writing clean code, 
+                    and continuously exploring modern web technologies.
+                    </q>
+                
+                    <p>Welcome to my portfolio website. Here you will find my latest projects and developer background.</p>
+                </div>
+            </div>
+        </header>
+
+        <!--About section-->
+        <section class="Row" id="About">
+            <div class="Column_2">
+                <img src="images/typing.gif" alt="Developer workspace preview">
+            </div>
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a Software and Web Developer student at the Academy of Learning Career College. 
+                I enjoy transforming ideas into responsive, accessible, and interactive digital experiences. 
+                Whether building front-end user interfaces or working with back-end logic, I focus on clean code, 
+                functional design, and constant learning.
+                </p>
+                <p>
+                    Interested in collaborating? Check out my work or jump to the <a href="#Contact">contact form</a> below.
+                </p>
+            </div>
+        </section>
+
+        <!--GitHub section-->
+        <section class="Row" id="GitHub">
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    You can view my code repositories and active projects directly on GitHub:
+                </p>
+                <p class="center">
+                    <a href="https://github.com/vinjohfer" target="_blank" rel="noopener noreferrer">View My GitHub Profile</a>
+                </p>
+            </div>
+            <div class="Column_2">
+                <a href="https://github.com/vinjohfer" target="_blank" rel="noopener noreferrer">
+                    <img src="images/GitHub.png" alt="GitHub Profile Link">
+                </a>
+            </div>
+        </section>
+
+        <!--Contact section-->
+        <section class="Row" id="Contact">
+            <div class="Column_2 Column_tall">
+                <img src="images/dial.gif" alt="Contact section decorative graphic">
+            </div>
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <form action="" method="POST">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" placeholder="Your name" required>
+
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Your email address" required>
+
+                    <label for="Message">Message:</label>
+                    <textarea id="Message" name="Message" placeholder="Write your message here..." required></textarea>
+
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </section>
+
+        <!--Footer section-->
+        <footer>
+            <p class="center">&copy; 2026 Portfolio. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>

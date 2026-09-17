@@ -1,0 +1,269 @@
+/***** GENERAL STYLING *****/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 50px; /* Offsets content so it won't be hidden behind fixed navbar */
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima, sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.05);
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+/* Paragraph elements */
+p {
+    font-family: Perpetua, "Rockwell Extra Bold", serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+p:hover {
+    transform: scale(1.01);
+}
+
+.center {
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.center:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: #0000ee;
+}
+
+q {
+    font-style: italic;
+}
+
+/* Image elements */
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transform: scale(1.03);
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        height: auto;
+        max-height: 250px;
+        margin-top: 20px;
+    }
+}
+
+footer {
+    padding: 2%;
+    background-color: #ffffff;
+}
+/***** END OF GENERAL STYLING *****/
+
+/***** NAVBAR STYLING *****/
+.Navbar {
+    overflow: hidden;
+    background-color: #39013e;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    animation: moveNav 1.5s ease-out;
+}
+
+@keyframes moveNav {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Avant Garde", Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: #000000;
+    font-weight: bold;
+}
+
+.Navbar a.active {
+    background-color: #555555;
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar a {
+        width: 25%;
+        font-size: 13px;
+        padding: 12px 6px;
+    }
+}
+/***** END OF NAVBAR STYLING *****/
+
+/***** VIDEO STYLING *****/
+#Typing_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    width: 100%;
+    padding: 40px 20px;
+    animation: moveVideoText 1.5s ease-out;
+}
+
+@keyframes moveVideoText {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/***** END OF VIDEO STYLING *****/
+
+/***** GRID & COLUMNS *****/
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Column_1, .Column_2 {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.Column_1 {
+    background-color: #f2f2f2;
+}
+
+.Column_2 {
+    background-color: #4d4d4d;
+}
+
+.Column_tall {
+    min-height: 480px;
+}
+
+@media screen and (max-width: 768px) {
+    .Column_1, .Column_2 {
+        width: 100%;
+        float: none;
+        min-height: auto;
+    }
+}
+/***** END OF GRID & COLUMNS *****/
+
+/***** CONTACT FORM STYLING *****/
+input[type=text], 
+input[type=email], /* Added to target the email field */
+textarea {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't overflow width */
+    display: block;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: Perpetua, "Rockwell Extra Bold", serif;
+    font-size: 16px;
+    transition: box-shadow 0.3s;
+}
+
+label {
+    display: block; /* Forces every label onto its own line */
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus,
+input[type=text]:hover, 
+input[type=email]:hover,
+textarea:hover {
+    box-shadow: 0 0 5px #00004d;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0 auto;
+    font-family: Perpetua, "Rockwell Extra Bold", serif;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-family: "Trebuchet MS", Optima, sans-serif;
+}
+/***** END OF CONTACT FORM STYLING *****/
